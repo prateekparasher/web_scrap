@@ -11,9 +11,9 @@ plot(data)
 
 
 
-#Lets compare Income and Rent
+#Lets compare accidents and months
 
-plot(road_data$accidents, type = "o", col = "blue")
+plot(road_data$accidents, type = "0", col = "blue")
 
 par(new = TRUE)
 
@@ -21,7 +21,7 @@ plot(warning_data$month, type = "b")
 
 
 
-#Relation between Income and Rent
+#Relation between accidents and months
 
 plot(road_data$accidents, warning_data$month, type = "o", col = "green", xlab = "accident", ylab = "weather warning")
 
