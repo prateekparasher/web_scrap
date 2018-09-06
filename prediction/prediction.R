@@ -11,55 +11,6 @@ plot(data)
 
 
 
-#Lets compare accidents and months
-
-plot(road_data$accidents, type = "0", col = "blue")
-
-par(new = TRUE)
-
-plot(warning_data$month, type = "b")
-
-
-
-#Relation between accidents and months
-
-plot(road_data$accidents, warning_data$month, type = "o", col = "green", xlab = "accident", ylab = "weather warning")
-
-title(main = "Accident and weather warning", col.main = "green", font.main = 4)
-
-
-
-#Scatter Plot
-
-scatter.smooth(x = road_data$accidents, y = warning_data$month, maintainer = "Accident ~ weather_warning")
-
-
-
-#Density Plot
-
-library(e1071)
-
-par(mfrow = c(1, 2))
-
-plot(density(road_data$accidents), main = "Density Plot :Accident",
-     
-     ylab = "Frequency",
-     
-     sub = paste("Skewness:", round(e1071::skewness(road_data$accidents), 2)))
-
-polygon(density(road_data$accidents), col = "yellow")
-
-
-
-plot(density(warning_data$month), main = "Density Plot :month",
-     
-     ylab = "Frequency",
-     
-     sub = paste("Skewness:", round(e1071::skewness(warning_data$month), 2)))
-
-polygon(density(warning_data$month), col = "blue")
-
-
 
 #Correlation Test
 
@@ -194,3 +145,6 @@ pl_mape
 summary(lr_model)
 
 summary(pl_model)
+
+
+
