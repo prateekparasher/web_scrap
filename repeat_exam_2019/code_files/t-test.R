@@ -37,6 +37,6 @@ Dublin_rain_data <- read.csv("C:/Users/PRATEEK PARASHER/Downloads/data_2.csv")
 
 pwr.t.test(d = .8, sig.level = .05, power = .9, type = "one.sample",
            alternative = "two.sided")
-
+hsdbfs
 
 
