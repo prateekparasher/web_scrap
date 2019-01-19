@@ -35,8 +35,9 @@ sd(my_data$Lowest.Temp)
 Dublin_temp_data <- read.csv("C:/Users/PRATEEK PARASHER/Downloads/data_1.csv") 
 Dublin_rain_data <- read.csv("C:/Users/PRATEEK PARASHER/Downloads/data_2.csv") 
 
-pwr.t.test(d = .8, sig.level = .05, power = .9, type = "one.sample",
+pwr.t.test(d = .8, sig.level = .05, power = .9, type = "two.sample",
            alternative = "two.sided")
-hsdbfs
+pwr.t.test(d = .5, sig.level = .05, power = .9, type = "one.sample",
+           alternative = "two.sided")
 
 
